@@ -36,7 +36,26 @@ php artisan vendor:publish --provider="Ptsilva\DocumentCounter\Providers\Documen
 ```
 Just use
 ```php
+$path = '/var/www/html/project/document.php';
+
 $totalPages = app('document-counter')->getTotalPages(new \Ptsilva\DocumentCounter\Documents\PDFDocument($path));
 
 dd($totalPages); // integer
+```
+Or using Dependency Injection
+```php
+use Ptsilva\DocumentCounter\Factory\DocumentCounterFactory;
+use Ptsilva\DocumentCounter\Documents\PDFDocument;
+class Controller
+{
+    public function index(DocumentCounterFactory $counter)
+    {
+        $path = '/var/www/html/project/document.php';
+
+        $totalPages = $counter->getTotalPages(new PDFDocument($path));
+
+        dd($totalPages); // integer
+    }
+
+}
 ```
