@@ -46,6 +46,10 @@ class DocumentCounterServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfigFrom(
+            __DIR__.'/../../config/document-counter.php', 'document-counter'
+        );
+        
         $this->publishes([
             __DIR__.'/../../config/document-counter.php' => config_path('document-counter.php'),
         ]);
