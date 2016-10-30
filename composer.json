@@ -8,6 +8,11 @@
             "email": "05.paulotarso@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+           "Ptsilva\\DocumentCounter\\": "src/"
+        }
+    },
     "require": {
         "symfony/process": "~3.0"
     }
