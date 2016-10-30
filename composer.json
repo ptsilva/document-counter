@@ -1,0 +1,14 @@
+{
+    "name": "ptsilva/document-counter",
+    "description": "A simple document page counter. Works with laravel and out of the box",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paulo Silva",
+            "email": "05.paulotarso@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/process": "~3.0"
+    }
+}
